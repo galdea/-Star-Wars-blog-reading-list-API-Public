@@ -18,8 +18,6 @@ export const Navbar = () => {
 					{store.favorites.map(favorite=>{
 						return <li className="dropdown-item">{favorite}</li>
 					})}
-					
-					
 				</ul>
 			</div>
 		</nav>

@@ -34,9 +34,7 @@ export const Planet = (props) => {
                         </div>
                         <div className="col-md-8">
                         <div className="card-body">
-                            <h2 className="card-title">{detail.properties.name}</h2>
-                            <p className="card-text">{}</p>
-                            <p className="card-text"><small className="text-muted">{detail.description}</small></p>
+                            <h2 className="card-title itemTitle">{detail.properties.name}</h2>
                         </div>
                         </div>
                     </div>
