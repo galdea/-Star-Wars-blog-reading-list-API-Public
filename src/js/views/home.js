@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
-import imgCard from "../../img/img-card.webp";
 import { Context } from "../store/appContext";
 
 export const Home = () => {
-
   const [loading, modifyLoading] = useState(true);
-  const { store, actions } = useContext(Context)
-
+  const { store, actions } = useContext(Context);
 
   useEffect(() => {
     async function fetchData() {
@@ -19,7 +16,6 @@ export const Home = () => {
     }
     fetchData();
   }, []);
-  
 
   if (loading) {
     return (
@@ -37,7 +33,7 @@ export const Home = () => {
           return (
             <div className="col" key={character.uid}>
               <div className="card my-2" style={{ width: "18rem" }}>
-                <img src={imgCard} className="card-img-top" />
+                <img src={character.imageUrl} className="card-img-top" />
                 <div className="card-body">
                   <h5 className="card-title">{character.name}</h5>
                   <p className="card-text">{character.gender}</p>
@@ -48,13 +44,12 @@ export const Home = () => {
                     Learn more!
                   </Link>
                   <button
-							    type="button"
-							    className="btn btn-outline-dark float-end"
-                  onClick={(e)=>actions.handleFavorites(character.name)}
+                    type="button"
+                    className="btn btn-outline-dark float-end"
+                    onClick={(e) => actions.handleFavorites(character.name)}
                   >
-                    
-                  <i className={"fas fa-heart"}/>
-						      </button>
+                    <i className={"fas fa-heart"} />
+                  </button>
                 </div>
               </div>
             </div>
@@ -68,7 +63,7 @@ export const Home = () => {
           return (
             <div className="col" key={planet.uid}>
               <div className="card my-2" style={{ width: "18rem" }}>
-                <img src={imgCard} className="card-img-top" />
+                <img src={planet.imageUrl} className="card-img-top" />
                 <div className="card-body">
                   <h5 className="card-title">{planet.name}</h5>
                   <p className="card-text">{planet.terrain}</p>
@@ -79,13 +74,12 @@ export const Home = () => {
                     Learn more!
                   </Link>
                   <button
-							    type="button"
-							    className="btn btn-outline-dark float-end"
-                  onClick={(e)=>actions.handleFavorites(planet.name)}
+                    type="button"
+                    className="btn btn-outline-dark float-end"
+                    onClick={(e) => actions.handleFavorites(planet.name)}
                   >
-                    
-                  <i className={"fas fa-heart"}/>
-						      </button>
+                    <i className={"fas fa-heart"} />
+                  </button>
                 </div>
               </div>
             </div>
@@ -99,7 +93,7 @@ export const Home = () => {
           return (
             <div className="col" key={vehicle.uid}>
               <div className="card my-2" style={{ width: "18rem" }}>
-                <img src={imgCard} className="card-img-top" />
+              <img src={vehicle.imageUrl} className="card-img-top" />
                 <div className="card-body">
                   <h5 className="card-title">{vehicle.name}</h5>
                   <p className="card-text">{vehicle.model}</p>
