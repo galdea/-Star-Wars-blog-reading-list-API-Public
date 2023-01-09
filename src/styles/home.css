@@ -1,3 +1,9 @@
+
+.container-fluid,
+footer, 
+nav {
+    background-color: black;
+}
 .btn.btn-outline-dark{
     color: #FFD000;
     border-color:#FFD000;
@@ -23,6 +29,7 @@ h5 {
 }
 
 .card {
+    background-color: grey;
     margin: auto;
     max-width: 1250px;
 }

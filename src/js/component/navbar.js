@@ -2,12 +2,14 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../img/logo.png";
 import { Context } from "../store/appContext";
+import "../../styles/home.css";
+
 
 
 export const Navbar = () => {
 	const {store} = useContext(Context)
 	return (
-		<nav className="navbar navbar-light bg-light mb-3 px-5">
+		<nav className="navbar px-5">
 			<Link to="/">
 			<img src={logo} />
 				<span className="navbar-brand"></span>

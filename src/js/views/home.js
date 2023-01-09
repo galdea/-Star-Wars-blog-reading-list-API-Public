@@ -27,7 +27,7 @@ export const Home = () => {
 
   return (
     <div className="container-fluid px-5">
-      <h2>PEOPLES</h2>
+      <h2>PEOPLE</h2>
       <div className="row scrolling flex-row flex-nowrap">
         {store.people.map((character) => {
           return (
