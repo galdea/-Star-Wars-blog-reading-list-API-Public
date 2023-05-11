@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import imgCard from "../../img/img-card.webp";
 
 export const Planet = (props) => {
     const params = useParams();
@@ -25,12 +24,14 @@ export const Planet = (props) => {
                     </div>
         }
 
+        const imageUrl = `https://starwars-visualguide.com/assets/img/planets/${detail.uid}.jpg`;
+
         return (
             <div>
                 <div className="card mb-3">
                     <div className="row g-0">
                         <div className="col-md-4">
-                            <img src={imgCard} className="img-fluid rounded-start"/>
+                        <img src={imageUrl} className="img-fluid rounded-start" alt={detail.name} />
                         </div>
                         <div className="col-md-8">
                         <div className="card-body">
